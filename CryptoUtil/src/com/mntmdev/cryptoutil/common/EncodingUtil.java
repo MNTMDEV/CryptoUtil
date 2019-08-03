@@ -39,7 +39,7 @@ public class EncodingUtil {
 	}
 
 	/**
-	 * 将16进制字符串转为二进制格式
+	 * 将16进制字符串转为二进制格式(有问题)
 	 * 
 	 * @param str
 	 * @return
@@ -56,7 +56,7 @@ public class EncodingUtil {
 			int bit = (i % 2 == 0) ? 4 : 0;
 			int val = 0;
 			if ((ch >= 'A') && (ch <= 'F')) {
-				val = ch - 'A';
+				val = ch - 'A' + 10;
 			} else if ((ch >= '0') && (ch <= '9')) {
 				val = ch - '0';
 			} else {
@@ -141,6 +141,11 @@ public class EncodingUtil {
 
 		System.out.println(util.Base64Encode(str));
 		System.out.println(util.Base64Decode(enc));
+
+		String hex = util.Byte2Hex(str.getBytes());
+		System.out.println(hex);
+		System.out.println(new String(util.Hex2Byte(hex)));
+
 	}
 
 }

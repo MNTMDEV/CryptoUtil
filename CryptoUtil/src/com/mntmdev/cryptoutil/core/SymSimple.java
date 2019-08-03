@@ -74,8 +74,8 @@ public class SymSimple {
 	public static void main(String[] args) {
 		String key = "123456";
 		String str = "123456";
-		String aesEnc = "h3Jzi0Yp/WEnnnptGPSk9A==";
-		String desEnc = "v2idKpeQ4lc=";
+		String aesEnc = "OQXvThGuGqlPHR9GA/i1tg==";
+		String desEnc = "Y5ukuVYyc0s=";
 		SymSimple symSimple = new SymSimple();
 		System.out.println(symSimple.AesEncrypt(str, key));
 		System.out.println(symSimple.AesDecrypt(aesEnc, key));

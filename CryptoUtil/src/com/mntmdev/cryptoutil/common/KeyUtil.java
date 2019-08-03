@@ -99,6 +99,7 @@ public class KeyUtil {
 	/**
 	 * 随机生成对称密钥(base64字符串表示)
 	 * 
+	 * @deprecated 对称密钥一般不用base64
 	 * @param type   可以是AES DES
 	 * @param length 密钥长度
 	 * @return base64格式的密钥
@@ -114,6 +115,7 @@ public class KeyUtil {
 	/**
 	 * 使用字符串种子生成base64格式的密钥
 	 * 
+	 * @deprecated 对称密钥一般不用base64
 	 * @param seed 种子
 	 * @param type 可以是AES DES
 	 * @return base64格式的密钥
@@ -131,7 +133,7 @@ public class KeyUtil {
 	}
 
 	/**
-	 * 生成密钥对
+	 * 随机生成密钥对
 	 * 
 	 * @param type   加密类型 RSA DSA
 	 * @param length 密钥长度
@@ -217,8 +219,8 @@ public class KeyUtil {
 		System.out.println("以下生成的是固定的密钥");
 		System.out.println(util.getKeyHex(seed, "AES"));
 		System.out.println(util.getKeyHex(seed, "DES"));
-		System.out.println(util.getKeyString(seed, "AES"));
-		System.out.println(util.getKeyString(seed, "DES"));
+//		System.out.println(util.getKeyString(seed, "AES"));
+//		System.out.println(util.getKeyString(seed, "DES"));
 		System.out.println("以下是不对称加密密钥对的随机生成");
 		AsymKeyPair asymKeyPair = util.getKeyPair("RSA", 1024);
 		System.out.println(asymKeyPair.getPubString());

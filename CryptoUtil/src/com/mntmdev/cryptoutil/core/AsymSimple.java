@@ -72,10 +72,14 @@ public class AsymSimple {
 		AsymSimple asymSimple = new AsymSimple();
 		String str = "123456";
 		KeyUtil keyUtil = new KeyUtil();
-		AsymKeyPair keyPair = keyUtil.getKeyPair("RSA", 1024);
+		AsymKeyPair keyPair = keyUtil.getKeyPair("123456","RSA", 1024);
 		String pub = keyPair.getPubString();
 		String pri = keyPair.getPriString();
 		String enc = asymSimple.RsaEncrypt(str, pub);
+		System.out.println("RSAπ´‘ø");
+		System.out.println(pub);
+		System.out.println("RSAÀΩ‘ø");
+		System.out.println(pri);
 		System.out.println("RSAº”√‹");
 		System.out.println(enc);
 		System.out.println("RSAΩ‚√‹");

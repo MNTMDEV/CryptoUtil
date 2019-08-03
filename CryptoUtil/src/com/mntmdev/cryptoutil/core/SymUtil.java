@@ -195,8 +195,8 @@ public class SymUtil {
 		String aesKey = "0123456789ABCDEFFEDCBA9876543210";
 		String desKey = "0123456789ABCDEF";
 		String str = "123456";
-		String aesEnc = "iqPUIBXFMI4Vsw7w//ka9A==";
-		String desEnc = "otEvy/NDSnY=";
+		String aesEnc = "nLPeCKJpD1GPyu0Oe2EtRg==";
+		String desEnc = "YvyLlffrXN8=";
 		SymUtil util = new SymUtil();
 		System.out.println("AESº”√‹∫ÕΩ‚√‹");
 		System.out.println(util.AesEncryptString(str, aesKey));
